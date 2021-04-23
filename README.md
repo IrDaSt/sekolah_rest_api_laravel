@@ -83,8 +83,6 @@ teacher = {
 ```
 **POST** /teachers => post new teacher data<br>
 ```json
-GET
-"id": required
 Body
 "name": required
 "age": not required
@@ -102,7 +100,6 @@ Body
 GET
 "id": required
 ```
-
 ### **Classrooms**
 **GET** /classrooms => get all classrooms data as array <br>
 ```json
@@ -129,8 +126,6 @@ classroom = {
 ```
 **POST** /classrooms => post new classroom data<br>
 ```json
-GET
-"id": required
 Body
 "name": required
 "age": not required
