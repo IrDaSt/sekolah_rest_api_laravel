@@ -57,8 +57,6 @@ Body
 GET
 "id": required
 ```
-<<<<<<< HEAD
-=======
 ### **Teachers**
 **GET** /teachers => get all teachers data as array <br>
 ```json
@@ -150,4 +148,3 @@ Body
 GET
 "id": required
 ```
->>>>>>> parent of 967b4d8 (Update README.md)
