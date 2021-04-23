@@ -40,8 +40,6 @@ student = {
 ```
 **POST** /students => post new student data<br>
 ```json
-GET
-"id": required
 Body
 "name": required
 "age": not required
