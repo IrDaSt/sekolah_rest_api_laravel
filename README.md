@@ -17,3 +17,12 @@ pada file .env<br>
 `php artisan serve --port [port]`<br>
 
 ## Usage
+### Student
+**GET** /students => get all students data as array <br>
+```json
+students = {
+    "id": 1,
+    "name": "name",
+    "age": 10
+}
+``` 
