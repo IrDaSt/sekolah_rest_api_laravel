@@ -20,7 +20,6 @@ pada file .env<br>
 ### Student
 **GET** /students => get all students data as array <br>
 ```json
-GET
 students = [{
     "id": 1,
     "name": "name",
@@ -33,8 +32,6 @@ students = [{
 ```
 **GET** /students/{id} => get one student data by id <br>
 ```json
-GET
-"id": required
 student = {
     "id": 1,
     "name": "name",
@@ -58,97 +55,6 @@ Body
 "age": not required
 ```
 **DELETE** /students/{id} => delete student by id<id>
-```json
-GET
-"id": required
-```
-### Teachers
-**GET** /teachers => get all teachers data as array <br>
-```json
-GET
-teachers = [{
-    "id": 1,
-    "name": "name",
-    "age": 10
-},{
-    "id": 2,
-    "name": "name",
-    "age": 10
-}]
-```
-**GET** /teachers/{id} => get one teacher data by id <br>
-```json
-GET
-"id": required
-teacher = {
-    "id": 1,
-    "name": "name",
-    "age": 10
-}
-```
-**POST** /teachers => post new teacher data<br>
-```json
-GET
-"id": required
-Body
-"name": required
-"age": not required
-```
-**POST** /teachers/{id} => update teacher by id<br>
-```json
-GET
-"id": required
-Body
-"name": required
-"age": not required
-```
-**DELETE** /teachers/{id} => delete teacher by id<id>
-```json
-GET
-"id": required
-```
-
-### Classrooms
-**GET** /classrooms => get all classrooms data as array <br>
-```json
-GET
-classrooms = [{
-    "id": 1,
-    "name": "name",
-    "age": 10
-},{
-    "id": 2,
-    "name": "name",
-    "age": 10
-}]
-```
-**GET** /classrooms/{id} => get one classroom data by id <br>
-```json
-GET
-"id": required
-classroom = {
-    "id": 1,
-    "name": "name",
-    "age": 10
-}
-```
-**POST** /classrooms => post new classroom data<br>
-```json
-GET
-"id": required
-Body
-"name": required
-"age": not required
-```
-**POST** /classrooms/{id} => update classroom by id<br>
-```json
-GET
-"id": required
-Body
-"name": required
-"age": not required
-```
-**DELETE** /classrooms/{id} => delete classroom by id<id>
 ```json
 GET
 "id": required
