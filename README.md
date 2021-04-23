@@ -20,9 +20,42 @@ pada file .env<br>
 ### Student
 **GET** /students => get all students data as array <br>
 ```json
-students = {
+students = [{
+    "id": 1,
+    "name": "name",
+    "age": 10
+},{
+    "id": 2,
+    "name": "name",
+    "age": 10
+}]
+```
+**GET** /students/{id} => get one student data by id <br>
+```json
+student = {
     "id": 1,
     "name": "name",
     "age": 10
 }
-``` 
+```
+**POST** /students => post new student data<br>
+```json
+GET
+"id": required
+Body
+"name": required
+"age": not required
+```
+**POST** /students/{id} => update student by id<br>
+```json
+GET
+"id": required
+Body
+"name": required
+"age": not required
+```
+**DELETE** /students/{id} => delete student by id<id>
+```json
+GET
+"id": required
+```
