@@ -17,7 +17,7 @@ pada file .env<br>
 `php artisan serve --port [port]`<br>
 
 ## Usage
-### **Student**
+### Student
 **GET** /students => get all students data as array <br>
 ```json
 GET
@@ -62,7 +62,7 @@ Body
 GET
 "id": required
 ```
-### **Teachers**
+### Teachers
 **GET** /teachers => get all teachers data as array <br>
 ```json
 GET
@@ -108,7 +108,7 @@ GET
 "id": required
 ```
 
-### **Classrooms**
+### Classrooms
 **GET** /classrooms => get all classrooms data as array <br>
 ```json
 GET
