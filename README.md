@@ -107,11 +107,11 @@ GET
 classrooms = [{
     "id": 1,
     "name": "name",
-    "age": 10
+    "description": "Lorem ipsum"
 },{
     "id": 2,
     "name": "name",
-    "age": 10
+    "description": "Lorem ipsum"
 }]
 ```
 **GET** /classrooms/{id} => get one classroom data by id <br>
@@ -121,14 +121,14 @@ GET
 classroom = {
     "id": 1,
     "name": "name",
-    "age": 10
+    "description": "Lorem ipsum"
 }
 ```
 **POST** /classrooms => post new classroom data<br>
 ```json
 Body
 "name": required
-"age": not required
+"description": not required
 ```
 **POST** /classrooms/{id} => update classroom by id<br>
 ```json
@@ -136,7 +136,7 @@ GET
 "id": required
 Body
 "name": required
-"age": not required
+"description": not required
 ```
 **DELETE** /classrooms/{id} => delete classroom by id<id>
 ```json
