@@ -124,16 +124,20 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Request $request)
     {
-        $target = User::find($id);
+        $target = User::where('email', $request->email)->first();
         if($target == null){
             return [
                 'message' => 'User not found',
+                'code' => 500,
             ]; // Not found
         }
         $target->delete();
 
-        return 200;
+        return [
+            'message' => 'Success',
+            'code' => 200,
+        ]; // Success
     }
 }

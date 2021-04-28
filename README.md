@@ -261,3 +261,19 @@ return {
     "code" : 502,
 }
 ```
+**POST** /users/delete => delete user<br>
+```json
+POST{
+    "email":"email@email.com",
+}
+return{
+    "message":"Success",
+    "code":200,
+}
+
+if email not found
+return {
+    "message":"User not found",
+    "code":500,
+}
+```

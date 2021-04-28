@@ -48,4 +48,4 @@ Route::get('users', [UserController::class, 'index']);
 Route::post('users/login', [UserController::class, 'login']);
 Route::post('users/register', [UserController::class, 'register']);
 Route::post('users/edit', [UserController::class, 'edit']);
-Route::delete('users/{id}/delete', [UserController::class, 'destroy']);
+Route::post('users/delete', [UserController::class, 'delete']);
