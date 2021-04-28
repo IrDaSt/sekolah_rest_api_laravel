@@ -30,7 +30,8 @@ class UserController extends Controller
         $findSameEmail = User::where('email', $request->email)->first();
         if($findSameEmail != null){
             return [
-                'message' => 'Email exist',
+                'message' => 'Email already exist',
+                'code' => 502,
             ];
         }
         $validator = Validator::make($request->all(), [
@@ -39,14 +40,20 @@ class UserController extends Controller
             'password' => 'required',
         ]);
         if($validator->fails()){
-            return $validator->errors(); // Error validation
+            return [
+                'message' => $validator->errors(),
+                'code' => 501,
+            ]; // Error validation
         }
         User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => hash('sha256', $request->password),
         ]);
-        return 200;
+        return [
+            'message' => 'Success',
+            'code' => 200,
+        ];
     }
 
     /**
@@ -61,11 +68,13 @@ class UserController extends Controller
         if($emailAvailable == null){
             return [
                 'message' => 'Email not found',
+                'code' => 501,
             ]; // Email not exist
         }
         if($emailAvailable->password != hash('sha256', $request->password)){
             return [
                 'message' => 'Wrong password',
+                'code' => 502,
             ]; // Password wrong
         }
         return $emailAvailable;
@@ -84,6 +93,7 @@ class UserController extends Controller
         if($emailExist == null){
             return [
                 'message' => 'Email not found',
+                'code' => 502,
             ]; // Error Email not exist
         }
         $validator = Validator::make($request->all(), [
@@ -92,14 +102,20 @@ class UserController extends Controller
             'password' => 'required',
         ]);
         if($validator->fails()){
-            return $validator->errors(); // Error Validation
+            return [
+                'message' => $validator->errors(),
+                'code' => 501,
+            ]; // Error Validation
         }
         $emailExist->update([
             'name' => $request->name,
             'email' => $request->email,
             'password' => hash('sha256', $request->password),
         ]);
-        return 200; // Success
+        return [
+            'message' => 'Success',
+            'code' => 200,
+        ]; // Success
     }
 
     /**

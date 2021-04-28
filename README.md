@@ -170,3 +170,94 @@ users = [
     }
 ]
 ```
+**POST** /users/login => login user<br>
+```json
+POST {
+    "email": "Required",
+    "password": "Required",
+}
+return user = {
+    "name": "Daniel Wijaya",
+    "email": "user@email.co.id",
+}
+
+if email not found
+return {
+    "message" : "Email not found",
+    "code" : 501,
+}
+
+if password wrong
+return {
+    "message" : "Wrong password",
+    "code" : 502,
+}
+```
+**POST** /users/register => register user<br>
+```json
+POST {
+    "name":"required",
+    "email":"required|email",
+    "password":"required",
+}
+return {
+    "message":"Success",
+    "code":200,
+}
+
+if validation fails
+return {
+    "message" : {
+        "name": [
+            "The name field is required."
+        ],
+        "email": [
+            "The email field is required."
+        ],
+        "password": [
+            "The password field is required."
+        ]
+    },
+    "code": 501,
+}
+
+if email exist
+return {
+    "message" : "Email already exist",
+    "code" : 502,
+}
+```
+**POST** /users/edit => edit user<br>
+```json
+POST {
+    "name":"required",
+    "email":"required|email",
+    "password":"required",
+}
+return {
+    "message":"Success",
+    "code":200,
+}
+
+if validation fails
+return {
+    "message" : {
+        "name": [
+            "The name field is required."
+        ],
+        "email": [
+            "The email field is required."
+        ],
+        "password": [
+            "The password field is required."
+        ]
+    },
+    "code": 501,
+}
+
+if email not exist
+return {
+    "message" : "Email not found",
+    "code" : 502,
+}
+```
