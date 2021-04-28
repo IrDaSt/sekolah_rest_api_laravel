@@ -245,6 +245,9 @@ return {
         "name": [
             "The name field is required."
         ],
+        "email": [
+            "The email field is required."
+        ],
         "password": [
             "The password field is required."
         ]
