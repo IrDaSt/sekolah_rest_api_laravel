@@ -109,7 +109,6 @@ class UserController extends Controller
         }
         $emailExist->update([
             'name' => $request->name,
-            'email' => $request->email,
             'password' => hash('sha256', $request->password),
         ]);
         return [
