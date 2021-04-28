@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\ClassroomController;
 use App\Http\Controllers\Api\StudentController;
 use App\Http\Controllers\Api\TeacherController;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -41,3 +42,10 @@ Route::get('classrooms/{id}', [ClassroomController::class, 'show']);
 Route::post('classrooms', [ClassroomController::class, 'store']);
 Route::post('classrooms/{id}', [ClassroomController::class, 'update']);
 Route::delete('classrooms/{id}', [ClassroomController::class, 'destroy']);
+
+// Users Route //
+Route::get('users', [UserController::class, 'index']);
+Route::post('users/login', [UserController::class, 'login']);
+Route::post('users/register', [UserController::class, 'register']);
+Route::post('users/edit', [UserController::class, 'edit']);
+Route::delete('users/{id}/delete', [UserController::class, 'destroy']);

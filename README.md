@@ -138,8 +138,35 @@ Body
 "name": required
 "description": not required
 ```
-**DELETE** /classrooms/{id} => delete classroom by id<id>
+**DELETE** /classrooms/{id} => delete classroom by id<br>
 ```json
 GET
 "id": required
+```
+### Users
+**GET** /users => get all users <br>
+```json
+GET
+users = [
+    {
+        "id": 1,
+        "name": "Daniel Wijaya",
+        "email": "daniel@email.com",
+    },
+    {
+        "id": 2,
+        "name": "Daniel Wijaya",
+        "email": "user@email.com",
+    },
+    {
+        "id": 3,
+        "name": "Daniel Wijaya",
+        "email": "user@email.co",
+    },
+    {
+        "id": 4,
+        "name": "Daniel Wijaya",
+        "email": "user@email.co.id",
+    }
+]
 ```
